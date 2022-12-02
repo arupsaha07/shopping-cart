@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row" *ngIf="!activeForm">
+        <div class="col-5 mx-auto">
+            <div>
+                <h2>User Signup</h2>
+                <form #userSignup="ngForm" (ngSubmit)="signup(userSignup.value)">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="name" ngModel placeholder="Name"
+                            id="floatingName">
+                        <label for="floatingName">Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel placeholder="email"
+                            id="floatingEmail">
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel placeholder="password"
+                            id="floatingPassword">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <button class="btn btn-primary mb-3">Sign up</button>
+                </form>
+                <P>Already have account? <a type="button" class="text-decoration-none" (click)="openLogin()">Click
+                        Here</a> to Login</P>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="activeForm">
+        <div class="col-5 mx-auto">
+            <div>
+                <h2>User Login</h2>
+                <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel placeholder="email"
+                            id="floatingEmail" #email="ngModel" required email>
+                        <label for="floatingEmail">Email</label>
+                        <div *ngIf="email.invalid && email.touched">Please enter valid email</div>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel placeholder="password"
+                            id="floatingPassword">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <button class="btn btn-primary mb-3" [disabled]="userLogin.invalid">Login</button>
+                    <p class="text-danger">{{authErrorMsg}}</p>
+                </form>
+                <P>New User? <a type="button" class="text-decoration-none" (click)="openSignup()">Click Here</a> to Sign
+                    Up</P>
+            </div>
+        </div>
+    </div>
+
+</div>

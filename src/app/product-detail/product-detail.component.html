@@ -1,0 +1,51 @@
+<div class="container" *ngIf="productData">
+    <div class="row">
+        <h2>Product Details</h2>
+        <div class="col-lg-6">
+            <div class="row">
+                <img class="img-fluid" src="{{productData.image}}" alt="">
+            </div>
+            <div class="row">
+                <div class="my-3 d-grid gap-3" style="grid-auto-flow: column;">
+                    <button type="button" class="btn btn-primary btn-lg">Add to Cart</button>
+                    <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <p class="fs-4">{{productData.name}}</p>
+                <p class="fs-3">Rs.&nbsp;{{productData.price}}</p>
+            </div>
+            <div class="row">
+                <div class="col-4 fw-semibold text-secondary">Category</div>
+                <div class="col-8">{{productData.category}}</div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-4 fw-semibold text-secondary">Color</div>
+                <div class="col-8">
+                    <span class="rounded-circle d-inline-block border border-3 border-white shadow p-2"
+                        [style.backgroundColor]="productData.color">
+                    </span>
+                </div>
+            </div>
+           
+            <div class="row align-items-center">
+                <div class="col-4 fw-semibold text-secondary">Quantity</div>
+                <div class="col-8">
+                    <div class="input-group my-3">
+                        <button class="btn btn-outline-secondary" (click)="handleQty('min')" type="button" id="button-addon1">-</button>
+                        <input type="text" class="form-control" value="{{productQuantity}}" style="max-width:60px ;">
+                        <button class="btn btn-outline-secondary" (click)="handleQty('plus')" type="button" id="button-addon2">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 fw-semibold text-secondary">Description</div>
+                <div class="col-8">{{productData.description}}</div>
+            </div>
+
+        </div>
+    </div>
+</div>

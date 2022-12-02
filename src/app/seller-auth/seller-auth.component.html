@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5 mx-auto">
+
+
+
+            <div class="" *ngIf="!showLogin">
+                <h2>Seller signup</h2>
+
+                <form class="" #sellerSignup="ngForm" (ngSubmit)="signUp(sellerSignup.value)">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="name" ngModel placeholder="Name"
+                            id="floatingName">
+                        <label for="floatingName">Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel placeholder="email"
+                            id="floatingEmail">
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel placeholder="password"
+                            id="floatingPassword">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <button class="btn btn-primary mb-3">Sign up</button>
+
+                    <a class="bg-info p-2 text-dark bg-opacity-25 d-block" (click)="openSignup()">Already have account?
+                        login</a>
+                </form>
+            </div>
+
+
+            <div *ngIf="showLogin">
+                <h2>Seller login</h2>
+
+                <form #sellerLogin="ngForm" (ngSubmit)="logIn(sellerLogin.value)">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel placeholder="email" id="floatingLoginEmail">
+                        <label for="floatingLoginEmail">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel placeholder="password" id="floatingLoginPassword">
+                        <label for="floatingLoginPassword">Password</label>
+                    </div>
+                    <button class="btn btn-primary mb-3">Login</button>
+                    <a class="bg-info p-2 text-dark bg-opacity-25 d-block" (click)="openLogin()">New user? click here to
+                        Signup</a>
+                </form>
+                <span>{{authError}}</span>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>

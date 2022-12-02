@@ -1,0 +1,116 @@
+{
+  "seller": [
+    {
+      "name": "test",
+      "email": "test@test.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "name": "sdfsdf",
+      "email": "sdfwefwefe",
+      "password": "sdfsdff",
+      "id": 5
+    },
+    {
+      "name": "Hyundai",
+      "email": "giugiu",
+      "password": "ioiohoih",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "category": "mobile",
+      "name": "motorola",
+      "price": "15000",
+      "image": "https://static.digit.in/default/c30ac0cc90e3d15e065022c1fcca0c1f80d08c93.jpeg?tr=w-1200",
+      "color": "Blue",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque beatae recusandae iure, perferendis veritatis sint impedit aut sit quibusdam, dicta maiores, velit quos repellat eligendi reiciendis magni harum vel!",
+      "id": 6
+    },
+    {
+      "name": "asus zenbook fold oled",
+      "price": "284290",
+      "image": "https://fdn.gsmarena.com/imgroot/news/22/08/asus-zenbook-17-fold-oled/-1200/gsmarena_001.jpg",
+      "id": 7
+    },
+    {
+      "category": "mobile",
+      "name": "nokia",
+      "price": "70000",
+      "image": "https://images.ctfassets.net/wcfotm6rrl7u/6auPjETkEzkbNTMCDtEs4z/42b189cb0ca7d0b5d040cf6f22c7ca80/nokia_C31-DTC-CAMERA-desktop.jpg",
+      "color": "Black",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque beatae recusandae iure, perferendis veritatis",
+      "id": 8
+    },
+    {
+      "category": "mobile",
+      "name": "Xiaomi 12",
+      "price": "15300",
+      "image": "https://xiaomiui.net/wp-content/uploads/2021/12/ximi12.jpg",
+      "color": "Blue",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque beatae recusandae iure",
+      "id": 9
+    },
+    {
+      "name": "Nike shoe",
+      "price": "17000",
+      "image": "https://static01.nyt.com/images/2021/03/30/multimedia/28xp-shoes-09/28xp-shoes-09-superJumbo.jpg",
+      "id": 10
+    },
+    {
+      "name": "Back pack",
+      "price": "3000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThk74o3afBAlncDmgRllWGAKd2K--9tTm4rQ&usqp=CAU",
+      "id": 11
+    },
+    {
+      "name": "iwatch",
+      "price": "30000",
+      "image": "https://cdn.mos.cms.futurecdn.net/DqhpyBZuLANNKzDCgSbLiG-1200-80.jpg",
+      "id": 12
+    },
+    {
+      "category": "toy",
+      "name": "Super hero",
+      "price": "2000",
+      "image": "https://media.wired.com/photos/5bfdba3586ef9a0ff73f01dd/3:2/w_1280%2Cc_limit/Amazon-Toys.jpg",
+      "color": "Red",
+      "description": "Realistic colorful superhero toys for 5+ years kids.",
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "name": "user1",
+      "email": "user1@email.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "user2",
+      "email": "user2@email.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "user3",
+      "email": "user3@email.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "user4",
+      "email": "user4@email.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "name": "user5",
+      "email": "user5@email.com",
+      "password": "1234",
+      "id": 5
+    }
+  ]
+}

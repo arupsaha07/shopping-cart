@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Seller update product</h2>
+
+    <form #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)">
+        <div class="form-floating mb-3">
+            <select type="text" class="form-select" name="category" ngModel="{{productData?.category}}" id="productCategory">
+                <option value="mobile">Mobile</option>
+                <option value="laptop">Laptop</option>
+                <option value="shoe">Shoe</option>
+                <option value="backpack">Backpack</option>
+                <option value="smartwatch">Smart Watch</option>
+                <option value="toy">Toy</option>
+            </select>
+            <label for="productCategory">Product Category</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="name" ngModel="{{productData?.name}}" id="productName">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="price" ngModel="{{productData?.price}}" id="price">
+            <label for="price">Price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="image" ngModel="{{productData?.image}}" id="image">
+            <label for="image">Image Url</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="color" ngModel="{{productData?.color}}" id="color">
+            <label for="color">Color</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" ngModel="{{productData?.description}}" id="description"></textarea>
+            <label for="description">Description</label>
+        </div>
+        <button class="btn btn-primary mb-3">Update</button>
+
+    </form>
+    
+
+
+    <p [innerHtml]="updateProductSuccessMsg"></p>
+
+
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="my-3">Searched for Results</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">place for filters</div>
+        <div class="col-lg-6">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" *ngFor="let item of searchResult">
+                    <div class="card">
+                        <a routerLink="/detail/{{item.id}}">
+                            <img src="{{item.image}}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}</h5>
+                            <p class="card-text">{{item.category}}</p>
+                            <p class="card-text">{{item.price}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

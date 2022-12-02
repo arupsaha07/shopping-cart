@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Seller add product</h2>
+
+    <form #addProduct="ngForm" (ngSubmit)="addNewProduct(addProduct.value)">
+        <div class="form-floating mb-3">
+            <select type="text" class="form-select" name="category" ngModel id="productCategory">
+                <option value="mobile">Mobile</option>
+                <option value="laptop">Laptop</option>
+                <option value="shoe">Shoe</option>
+                <option value="backpack">Backpack</option>
+                <option value="smartwatch">Smart Watch</option>
+                <option value="toy">Toy</option>
+            </select>
+            <label for="productCategory">Product Category</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="name" ngModel id="productName">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="price" ngModel id="price">
+            <label for="price">Price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="image" ngModel id="image">
+            <label for="image">Image Url</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="color" ngModel id="color">
+            <label for="color">Color</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" ngModel id="description"></textarea>
+            <label for="description">Description</label>
+        </div>
+        <button class="btn btn-primary mb-3">Add</button>
+
+    </form>
+
+
+    <p [innerHtml]="addProductSuccessMsg"></p>
+
+
+</div>
