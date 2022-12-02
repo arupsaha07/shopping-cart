@@ -1,20 +1,20 @@
 {
   "seller": [
     {
-      "name": "test",
-      "email": "test@test.com",
+      "name": "seller1",
+      "email": "seller2@test.com",
       "password": "1234",
       "id": 4
     },
     {
-      "name": "sdfsdf",
-      "email": "sdfwefwefe",
+      "name": "seller2",
+      "email": "seller2@test.com",
       "password": "sdfsdff",
       "id": 5
     },
     {
-      "name": "Hyundai",
-      "email": "giugiu",
+      "name": "seller3",
+      "email": "seller3@test.com",
       "password": "ioiohoih",
       "id": 6
     }
@@ -30,6 +30,7 @@
       "id": 6
     },
     {
+      "category": "laptop",
       "name": "asus zenbook fold oled",
       "price": "284290",
       "image": "https://fdn.gsmarena.com/imgroot/news/22/08/asus-zenbook-17-fold-oled/-1200/gsmarena_001.jpg",
@@ -54,21 +55,26 @@
       "id": 9
     },
     {
+      "category": "shoe",
       "name": "Nike shoe",
       "price": "17000",
       "image": "https://static01.nyt.com/images/2021/03/30/multimedia/28xp-shoes-09/28xp-shoes-09-superJumbo.jpg",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque beatae recusandae iure",
       "id": 10
     },
     {
+      "category": "luggage",
       "name": "Back pack",
       "price": "3000",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThk74o3afBAlncDmgRllWGAKd2K--9tTm4rQ&usqp=CAU",
       "id": 11
     },
     {
+      "category": "watch",
       "name": "iwatch",
       "price": "30000",
       "image": "https://cdn.mos.cms.futurecdn.net/DqhpyBZuLANNKzDCgSbLiG-1200-80.jpg",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate doloremque beatae recusandae iure",
       "id": 12
     },
     {
@@ -105,12 +111,6 @@
       "email": "user4@email.com",
       "password": "1234",
       "id": 4
-    },
-    {
-      "name": "user5",
-      "email": "user5@email.com",
-      "password": "1234",
-      "id": 5
     }
   ]
 }
