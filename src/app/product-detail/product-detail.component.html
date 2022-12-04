@@ -7,7 +7,8 @@
             </div>
             <div class="row">
                 <div class="my-3 d-grid gap-3" style="grid-auto-flow: column;">
-                    <button type="button" class="btn btn-primary btn-lg">Add to Cart</button>
+                    <button type="button" *ngIf="!removeCart" class="btn btn-primary btn-lg" (click)="addToCart()">Add to Cart</button>
+                    <button type="button" *ngIf="removeCart" class="btn btn-primary btn-lg" (click)="removeFromCart(productData.id)">Remove From Cart</button>
                     <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
                 </div>
             </div>
@@ -29,6 +30,7 @@
                     </span>
                 </div>
             </div>
+
            
             <div class="row align-items-center">
                 <div class="col-4 fw-semibold text-secondary">Quantity</div>

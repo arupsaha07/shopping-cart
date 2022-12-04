@@ -4,7 +4,7 @@
 
 
 
-            <div class="" *ngIf="!showLogin">
+            <div class="mt-5" *ngIf="!showLogin">
                 <h2>Seller signup</h2>
 
                 <form class="" #sellerSignup="ngForm" (ngSubmit)="signUp(sellerSignup.value)">
@@ -34,7 +34,7 @@
             </div>
 
 
-            <div *ngIf="showLogin">
+            <div class="mt-5" *ngIf="showLogin">
                 <h2>Seller login</h2>
 
                 <form #sellerLogin="ngForm" (ngSubmit)="logIn(sellerLogin.value)">

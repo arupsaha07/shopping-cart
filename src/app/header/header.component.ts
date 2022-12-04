@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   logoIcon = faShop;
   cartIcon = faCartShopping;
   userName: string = '';
+  cartItem = 0;  
 
   constructor(private route: Router, private product: ProductService) { }
 
@@ -38,6 +39,14 @@ export class HeaderComponent implements OnInit {
           this.menuType = "default"
         }
       }
+    });
+
+    let cartData = localStorage.getItem('localCart');
+    if(cartData){
+      this.cartItem = JSON.parse(cartData).length;
+    }
+    this.product.cartData.subscribe((items)=>{
+      this.cartItem = items.length
     })
   }
 

@@ -36,7 +36,15 @@
                 <ul *ngSwitchCase="'default'" class="navbar-nav mb-2 mb-lg-0 justify-content-end">
                     <li class="nav-item"><a class="nav-link fw-bolder" routerLink="/user-auth">Login/Signup</a></li>
                     <li class="nav-item"><a class="nav-link" routerLink="/seller-auth">Seller</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Cart (0)</a></li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link position-relative text-light">
+                            <fa-icon [icon]="cartIcon"></fa-icon>
+                            <span
+                                class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-danger lh-1 shadow-sm border border-light">
+                                {{cartItem }}
+                            </span>
+                        </a>
+                    </li>
                 </ul>
                 <ul *ngSwitchCase="'seller'" class="navbar-nav mb-2 mb-lg-0 justify-content-end">
                     <li class="nav-item"><a class="nav-link" routerLink="/seller-home">Product List</a></li>
@@ -54,7 +62,7 @@
                             <fa-icon [icon]="cartIcon"></fa-icon>
                             <span
                                 class="position-absolute top-75 start-100 translate-middle badge rounded-pill bg-danger lh-1 shadow-sm border border-light">
-                                0
+                                {{cartItem }}
                             </span>
                         </a>
                     </li>
