@@ -1,12 +1,7 @@
-# Stage 1 : Compile and build angular codebase
-
 # docker build -t ecomm-project:1.0 .
 
 # Use official node image as the base image
-
-FROM node:latest as node
-
-# alpine is lightweight baseimage
+FROM node:latest AS build
 
 # Set the working directory
 WORKDIR /app
@@ -24,10 +19,10 @@ RUN npm run build --prod
 
 
 #stage 2 : Serve app with nginx server
-FROM nginx:alpine
+FROM nginx:latest
 
 # Copy the build output to replace the default nginx contents
-COPY --from=node /app/dist/ecomm-project /usr/share/nginx/html
+COPY --from=build /app/dist/ecomm-project /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
